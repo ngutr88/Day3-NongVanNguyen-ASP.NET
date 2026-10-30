@@ -7,13 +7,7 @@ namespace Day3_NongVanNguyen.Controllers
     public class CategoryController : Controller
     {
         // gia lap csdl
-        private static List<Category> _categories = new List<Category>()
-         {
-             new Category() { Id = 1, Name = "Category 1" },
-             new Category() { Id = 2, Name = "Category 2" },
-             new Category() { Id = 3, Name = "Category 3" },
-            
-         };
+        private static readonly List<Category> _categories = CategoryData.Items;
         // GET: CategoryController
         public ActionResult Index()
         {
@@ -132,3 +126,4 @@ namespace Day3_NongVanNguyen.Controllers
         }
     }
 }
+
